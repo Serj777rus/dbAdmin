@@ -8,6 +8,7 @@ import './models/index.js';
 const bootstrap = async () => {
   await initDatabase();
   const app = createApp();
+  console.log(app._router.stack);
   app.listen(appConfig.port, () => {
     logger.info(`Сервис запущен на порту ${appConfig.port}`);
   });
