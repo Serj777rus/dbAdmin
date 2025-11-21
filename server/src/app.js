@@ -9,7 +9,7 @@ import { errorHandler } from './api/middlewares/errorHandler.js';
 
 export const createApp = () => {
   const app = express();
-
+  app.set('trust proxy', 1);
   app.use(
     cors({
       origin: appConfig.frontendUrl,
