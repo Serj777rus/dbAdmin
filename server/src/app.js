@@ -13,6 +13,7 @@ export const createApp = () => {
   app.use(
     cors({
       origin: appConfig.frontendUrl,
+      origin: '*',
       credentials: true
     })
   );
